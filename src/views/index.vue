@@ -18,9 +18,7 @@
 }
 
 .scollbar img {
-    margin-top: 10px;
     width: 100%;
-    height: 300px;
 }
 </style>
 <template>
@@ -48,16 +46,18 @@
                             团队GitHub
                         </Menu-item>
                         <Menu-item name="4">
-                            <Icon type="document-text"></Icon>
-                            团队文档
-                        </Menu-item>
-                        <Menu-item name="5">
                             <Icon type="help"></Icon>
                             关于
                         </Menu-item>
-                        <Menu-item name="6">
+                        <Menu-item name="5">
                             <Icon type="ios-people"></Icon>
                             成员
+    
+                        </Menu-item>
+                        <Menu-item name="6">
+                            <Icon type="document-text"></Icon>
+                            团队文档
+    
                         </Menu-item>
                     </Menu>
                 </div>
@@ -66,7 +66,11 @@
     
         </div>
         <div class="scollbar">
-            <img src="http://of8t6pu0g.bkt.clouddn.com/img_bg_1.jpg">
+            <ur>
+                <li v-for="slide in slideList">
+                    <img :src="slide.url">
+                </li>
+            </ur>
         </div>
     
     </div>
@@ -77,20 +81,23 @@ export default {
         return {
             theme1: 'light',
             slideList: [
-                {
+                {   
+                    id:1,
                     title: '主标题1',
                     subheading: '副标题1',
-                    url: 'http://fex.baidu.com/public/images/banner/h5.jpg'
+                    url: 'http://of8t6pu0g.bkt.clouddn.com/h1.jpg'
                 },
                 {
-                    title: '主标题2',
-                    subheading: '副标题2',
-                    url: 'http://fex.baidu.com/public/images/banner/h5.jpg'
+                    id:2,
+                    title: '主标题1',
+                    subheading: '副标题1',
+                    url: 'http://of8t6pu0g.bkt.clouddn.com/h2.jpg'
                 },
                 {
-                    title: '主标题3',
-                    subheading: '副标题3',
-                    url: 'http://fex.baidu.com/public/images/banner/h5.jpg'
+                    id:3,
+                    title: '主标题1',
+                    subheading: '副标题1',
+                    url: 'http://of8t6pu0g.bkt.clouddn.com/h3.jpg'
                 },
             ]
         }

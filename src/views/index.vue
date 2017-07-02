@@ -91,7 +91,29 @@
 
 .memberIntroduceSpan {
     text-align: center;
-    vertical-align:middle;
+    vertical-align: middle;
+}
+
+.addUs {
+    height: 300px;
+    background: -webkit-linear-gradient(-45deg, #4cc1bd 0%, #3f95ea 100%);
+    background: -o-linear-gradient(-45deg, #4cc1bd 0%, #3f95ea 100%);
+    background: -moz-linear-gradient(-45deg, #4cc1bd 0%, #3f95ea 100%);
+    background: linear-gradient(-45deg, #4cc1bd 0%, #3f95ea 100%);
+}
+
+.addUsMain {
+    margin-top: 40px;
+}
+
+.addUs .addUsMain p{
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+}
+
+.addUs .addUsMain button{
+
 }
 
 .footer {
@@ -230,7 +252,7 @@
             </Row>
         </div>
         <div class="memberIntroduce">
-            <Tabs type="card" closable @on-tab-remove="handleTabRemove">
+            <Tabs type="card" closable>
                 <Tab-pane label="Web组" icon="social-chrome" type="card">
                     <Row>
                         <Col span="12">
@@ -248,7 +270,6 @@
                         <p>用游览器作为魔法，服务器作为利刃，创意各类web应用</p>
                         </Col>
                     </Row>
-    
                 </Tab-pane>
                 <Tab-pane label="移动组" icon="iphone" type="card">
                     <Row>
@@ -323,6 +344,12 @@
                     </Row>
                 </Tab-pane>
             </Tabs>
+        </div>
+        <div class="addUs">
+            <div class="addUsMain">
+                <p>立即加入我们的团队</p>
+                <Button type="success" size="large">立即加入</Button>
+            </div>
         </div>
         <div class="footer">
             <div class="copyright">
